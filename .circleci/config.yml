@@ -3,7 +3,10 @@ version: 2
 jobs:
   build:
     docker:
-    - image: circleci/secor:0.1.0
+      - image: circleci/secor:0.1.0
+        auth:
+          username: mydockerhub-user
+          password: Divya123@
     steps:
     - checkout
     - setup_remote_docker:
