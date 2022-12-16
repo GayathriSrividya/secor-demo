@@ -11,7 +11,7 @@ jobs:
     - checkout
     - setup_remote_docker
     - run: |
-        apt-get install docker-engine -y
+        sudo apt-get install docker-engine -y
         service docker start
         docker run hello-world
 workflows:
