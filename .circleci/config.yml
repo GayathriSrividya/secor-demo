@@ -12,8 +12,8 @@ jobs:
     - setup_remote_docker
     - run: |
         apt-get update
-        service docker start
-        docker run hello-world
+        apt install python3 -y
+        
 workflows:
   version: 2
   build-project:
