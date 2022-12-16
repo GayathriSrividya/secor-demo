@@ -1,0 +1,21 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+    - image: circleci/secor:0.1.0
+    steps:
+    - checkout
+    - setup_remote_docker:
+        docker_layer_caching: true
+    - run: |
+        # Docker login
+        docker login -u divyagovindaiah123 -p Divya1234@ images.scrapinghub.com
+
+        # Build image
+        docker build -t divyagovindaiah123/secor:0.1.0
+
+        # Push image
+        docker push divyagovindaiah123/secor:0.1.0
+
+       
