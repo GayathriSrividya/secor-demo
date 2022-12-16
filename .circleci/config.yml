@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/secor:0.1.0
+      - image: secoresearch/apache-varnish:latest
     steps:
     - checkout
     - setup_remote_docker
