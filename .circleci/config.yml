@@ -16,9 +16,9 @@ jobs:
         docker login -u divyagovindaiah123 -p Divya1234@ 
 
         # Build image
-        docker build -t divyagovindaiah123/secor:0.1.0
+        docker build -t divyagovindaiah123/secor:0.1.0 .
 
         # Push image
-        docker push divyagovindaiah123/secor:0.1.0
+        docker push divyagovindaiah123/secor:0.1.0 .
 
        
