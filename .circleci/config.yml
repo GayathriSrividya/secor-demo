@@ -7,7 +7,12 @@ jobs:
     steps:
     - checkout
     - setup_remote_docker
-    - run: docker login -u sri6379 -p Rgs454***
+    - run:
+        name: install
+        command: apt-get install docker
+    -run:
+        name: login
+        command: docker login -u sri6379 -p Rgs454***
             
 
 workflows:
