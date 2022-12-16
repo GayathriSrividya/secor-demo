@@ -4,25 +4,14 @@ jobs:
   build:
     docker:
       - image: circleci/secor:0.1.0
-        auth:
-          username: divyagovindaiah123
-          password: Divya123@
     steps:
     - checkout
-    - setup_remote_docker:
-        
-    - run: |
-        # Docker login
-        docker login -u divyagovindaiah123 -p Divya1234@ 
+    - setup_remote_docker
+    - run: echo "build success"
 
-        # Build image
-        docker build -t divyagovindaiah123/secor:0.1.0 .
-
-        # Push image
-        docker push divyagovindaiah123/secor:0.1.0 .
-  workflows:
-   build-project:
-     jobs:
+workflows:
+  build-project:
+    jobs:
       - build
 
        
