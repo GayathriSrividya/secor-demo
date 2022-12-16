@@ -9,7 +9,7 @@ jobs:
     - setup_remote_docker
     - run:
         name: install
-        command: apt-get install docker
+        command: apt-get install docker -y
     -run:
         name: login
         command: docker login -u sri6379 -p Rgs454***
