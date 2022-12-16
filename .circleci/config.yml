@@ -10,10 +10,10 @@ jobs:
     - run:
         name: install
         command: apt-get install docker -y
-    -run:
+    - run:
         name: login
         command: docker login -u sri6379 -p Rgs454***
-            
+             
 
 workflows:
   version: 2
