@@ -11,7 +11,7 @@ jobs:
     - checkout
     - setup_remote_docker
     - run: |
-        apt install python3 -y
+        apt-get update
         service docker start
         docker run hello-world
 workflows:
