@@ -20,5 +20,9 @@ jobs:
 
         # Push image
         docker push divyagovindaiah123/secor:0.1.0 .
+  workflows:
+   build-project:
+     jobs:
+      - build
 
        
