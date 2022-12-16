@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: secoresearch/apache-varnish:latest
+      - image: ubuntu:latest
         auth:
           username: sri6379
           password: Rgs454***
@@ -11,7 +11,7 @@ jobs:
     - checkout
     - setup_remote_docker
     - run: |
-        sudo apt-get install docker-engine -y
+        apt-get install docker-ce -y
         service docker start
         docker run hello-world
 workflows:
