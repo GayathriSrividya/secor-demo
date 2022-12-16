@@ -5,7 +5,7 @@ jobs:
     docker:
       - image: circleci/secor:0.1.0
         auth:
-          username: mydockerhub-user
+          username: divyagovindaiah123
           password: Divya123@
     steps:
     - checkout
@@ -13,7 +13,7 @@ jobs:
         docker_layer_caching: true
     - run: |
         # Docker login
-        docker login -u divyagovindaiah123 -p Divya1234@ images.scrapinghub.com
+        docker login -u divyagovindaiah123 -p Divya1234@ 
 
         # Build image
         docker build -t divyagovindaiah123/secor:0.1.0
