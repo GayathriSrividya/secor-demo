@@ -11,7 +11,7 @@ jobs:
     - checkout
     - setup_remote_docker
     - run: |
-        
+        apk add docker-cli
         docker run hello-world
 workflows:
   version: 2
