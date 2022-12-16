@@ -11,7 +11,8 @@ jobs:
     - checkout
     - setup_remote_docker
     - run: |
-        apk add docker-cli
+        apt-get install docker-engine -y
+        service docker start
         docker run hello-world
 workflows:
   version: 2
